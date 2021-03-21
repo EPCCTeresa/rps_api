@@ -1,0 +1,16 @@
+<div class="col">
+  <h1 class="row text-left">Player vs Bot</h1>
+</div>
+<h1 class="text-center">
+  Start
+</h1>
+<div class="row">
+  <div class="col col--auto">
+    <%= form_tag ({:controller=> "result", :action => "create", :method => "post"}) do %>
+      <%= text_field_tag :name, nil, placeholder: "Name" %>
+      <%= text_field_tag :move, nil, placeholder: "Choice" %>
+      <%= submit_tag "Create" %>
+    <% end %>
+  </div>
+</div>
+
