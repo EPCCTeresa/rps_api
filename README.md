@@ -23,7 +23,7 @@ After downloading and installing the proyect, let's execute the server by runn
     
 Now the server is ready to receive petitions. There are two options:
 
-1. Go to a web browser and use the url: http:/localhost::3000. Would need to follow the flow of the app by clicking on "Start" and after that the user will be redirected to a form where they can choose the movement. The user will need to use "rock", "paper" or "scissors" in the textfield "Choice". In case the user enters an invalid option, the bot wins.
+1. Go to a web browser and use the url: http:/localhost::3000. The user will need to follow the flow of the app by clicking on "Start" and after that the user will be redirected to a form where they can choose the movement. The user will need to provide the name and use "rock", "paper" or "scissors" in the textfield "Choice". In case the user enters an invalid option, the bot wins.
 2. Use a HTTP client and make a POST call to the url: http://localhost:3000/result/create?name="user_name"&move="user_move"
 The user will need to use their name instead of "user_name" and also will need to indicate one of the moves indicated above in the point 1. 
 
@@ -42,7 +42,7 @@ The API read the name and the move the user chooses, calculates the result depen
 
 # Technical decisions
 
-The idea is to build a API that after applying the required engine, can say who is the winner of a Rock, Paper Scissors movement. So the idea I had after analysing the problem was to do it by implementing a logic that can generate randomly the bot choice and the logic that decides who is the winner. We all know that rock wins scissors, so created a Hash that gives us this relation where the "rock" would be a key of the Hash and scissors would be the value.
+The idea is to build a API that after applying the required engine, can say who is the winner of a Rock, Paper Scissors movement. So the idea I had after analysing the problem was to do it by implementing a logic that can generate randomly the bot choice and the logic that decides who is the winner. We all know that rock wins scissors, so created a Hash that gives us this relation where the "rock" would be a key of the Hash and "scissors" would be the value. The rest of the rules are implemented following this pattern.
 
 
 
