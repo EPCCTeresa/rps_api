@@ -5,7 +5,6 @@ module Rps
       @guess_choice = options[:move]
       @guess_name = options[:name]
       @bot = bot || generate_bot_answer
-      byebug
     end
 
     def get_serialized_result
@@ -15,7 +14,6 @@ module Rps
     private
 
     def get_result
-      byebug
       puts "Bot: #{@bot}"
       puts "User: #{@guess_choice}"
       return if @guess_choice.nil?

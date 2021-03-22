@@ -12,7 +12,6 @@ RSpec.describe Rps do
     let(:tie_msg) { "Tie" }
 
     it 'user wins against scissors' do
-      byebug
       rps = Rps::Comparator.new(options, "scissors")
       expect(rps.get_serialized_result[:result]).to eq(user_wins_msg.to_s)
     end
